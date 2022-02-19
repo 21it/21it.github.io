@@ -5,7 +5,7 @@ import Hakyll
 import System.FilePath
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith cfg $ do
   match "css/*" $ do
     route idRoute
     compile compressCssCompiler
@@ -69,27 +69,35 @@ main = hakyll $ do
   match "templates/*" $ compile templateBodyCompiler
   match "license.markdown" $ compile pandocCompiler
   match "index/*.markdown" $ compile pandocCompiler
-  match "index/*.html" $ compile $ do
-    posts <- recentFirst =<< loadAll "blog/*"
-    meta <- getMetadata =<< getUnderlying
-    pairs <-
-      mapM makeItem
-        $ makePairs
-        $ maybe [] id
-        $ lookupStringList "pairs" meta
-    let pairCtx =
-          field "left" (return . fst . itemBody)
-            <> field "right" (return . snd . itemBody)
-    let ctx =
-          listField "posts" postCtx (return posts)
-            <> listField "pairs" pairCtx (return pairs)
-            <> defaultContext
-    getResourceBody
-      >>= applyAsTemplate ctx
-      >>= relativizeUrls
+  match "index/*.html" $
+    compile $ do
+      posts <- recentFirst =<< loadAll "blog/*"
+      meta <- getMetadata =<< getUnderlying
+      pairs <-
+        mapM makeItem $
+          makePairs $
+            maybe [] id $
+              lookupStringList "pairs" meta
+      let pairCtx =
+            field "left" (return . fst . itemBody)
+              <> field "right" (return . snd . itemBody)
+      let ctx =
+            listField "posts" postCtx (return posts)
+              <> listField "pairs" pairCtx (return pairs)
+              <> defaultContext
+      getResourceBody
+        >>= applyAsTemplate ctx
+        >>= relativizeUrls
+
+cfg :: Configuration
+cfg =
+  defaultConfiguration
+    { destinationDirectory = "docs"
+    }
 
 makePairs :: [a] -> [(a, a)]
-makePairs = reverse . this []
+makePairs =
+  reverse . this []
   where
     this acc [] = acc
     this acc (x0 : x1 : xs) = this ((x0, x1) : acc) xs
