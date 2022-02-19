@@ -1,0 +1,16 @@
+---
+id: blog
+title: Blog
+color: black
+fontawesome: "fas fa-feather"
+---
+
+<ul class="no-bullet">
+  $for(posts)$
+    <li>
+      <div class="full none-600"><a href="$url$">$title$</a></div>
+      <div class="full none-600"><small>$date$</small></div>
+      <div class="none full-600"><a href="$url$">$title$</a> - <em>$date$</em></div>
+    </li>
+  $endfor$
+</ul>
