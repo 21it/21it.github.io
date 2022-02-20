@@ -154,5 +154,6 @@ ul ol {
 }
 
 .no-bullet {
+  padding-left: 10px;
   list-style-type: none;
 }
