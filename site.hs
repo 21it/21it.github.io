@@ -32,15 +32,21 @@ main = hakyllWith cfg $ do
         >>= applyAsTemplate indexCtx
         >>= loadAndApplyTemplate "templates/default.html" indexCtx
         >>= relativizeUrls
-  create ["about.html", "pricing.html", "blog.html", "contact.html"] $ do
-    route idRoute
-    compile $ do
-      anchor <- takeBaseName . toFilePath <$> getUnderlying
-      let ctx = constField "anchor" anchor <> defaultContext
-      makeItem ""
-        >>= applyAsTemplate ctx
-        >>= loadAndApplyTemplate "templates/index-redirect.html" ctx
-        >>= relativizeUrls
+  create
+    [ "about.html",
+      "pricing.html",
+      "blog.html",
+      "contact.html"
+    ]
+    $ do
+      route idRoute
+      compile $ do
+        anchor <- takeBaseName . toFilePath <$> getUnderlying
+        let ctx = constField "anchor" anchor <> defaultContext
+        makeItem ""
+          >>= applyAsTemplate ctx
+          >>= loadAndApplyTemplate "templates/index-redirect.html" ctx
+          >>= relativizeUrls
   match "license.markdown" $ do
     route $ setExtension "html"
     compile $

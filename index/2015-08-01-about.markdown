@@ -6,6 +6,5 @@ devicon: haskell
 ---
 
 <ul>
-Tkachuk Labs is my personal software development brand, located in Tallinn, Republic of Estonia. I specialize in commercial software development using [Haskell](https://www.haskell.org) programming language. I work with passion and create the best software
-using the best technologies.
+I am pseudonymous software developer 21it. I do specialize in a commercial software development using [Haskell](https://www.haskell.org) programming language. I work with passion and create the best software using the best technologies.
 </ul>

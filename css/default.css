@@ -1,31 +1,41 @@
 /* fonts */
 
 @font-face {
-  font-family: "TkachukLabsMain";
+  font-family: "regular-font";
   font-display: swap;
   src: url(../fonts/rondo.otf);
 }
 
-* {
-  font-family: TkachukLabsMain;
-}
-
 @font-face {
-  font-family: "TkachukLabsLogo";
+  font-family: "square-font";
   font-display: swap;
   src: url(../fonts/larabiefont.ttf);
 }
 
-h1, h2, h3, h4, h5, a, a>span, .button, .index-summary>span {
-  font-family: TkachukLabsLogo;
+@font-face {
+  font-family: "racing-font";
+  font-display: swap;
+  src: url(../fonts/Sneakout-DGym.ttf);
 }
 
 .regular-font {
-  font-family: TkachukLabsMain;
+  font-family: "regular-font";
 }
 
 .square-font {
-  font-family: TkachukLabsLogo;
+  font-family: "square-font";
+}
+
+.racing-font {
+  font-family: "racing-font";
+}
+
+* {
+  font-family: "regular-font";
+}
+
+h1, h2, h3, h4, h5, .button {
+  font-family: "square-font";
 }
 
 /* basic layouts */
@@ -111,14 +121,14 @@ footer {
 }
 
 .index-title {
-  padding-top: 30vmin;
+  padding-top: 34vmin;
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .index-summary {
-  padding-top: 9vmin;
+  padding-top: 2vmin;
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
