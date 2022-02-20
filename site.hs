@@ -34,7 +34,7 @@ main = hakyllWith cfg $ do
         >>= relativizeUrls
   create
     [ "about.html",
-      "pricing.html",
+      "skills.html",
       "blog.html",
       "contact.html"
     ]

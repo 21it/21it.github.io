@@ -1,0 +1,24 @@
+---
+id: skills
+title: Skills
+color: white
+fontawesome: "fab fa-bitcoin"
+---
+
+<ul class="no-bullet"><li>Haskell is my primary and the most favorte tool. I do have advanced level of Haskell including:</li></ul>
+
+- Tagless final encoding, monad transformers, lifting and unlifting for efficient effects management.
+- DataKinds for better phantom type parameters and [Singletons](https://hackage.haskell.org/package/singletons) for dependent type programming.
+- [Lens](https://hackage.haskell.org/package/microlens) for efficient data manipulation and parsing.
+- [Units](https://hackage.haskell.org/package/units) for dimential analysis.
+- Template Haskell and Quasiquotation for compile-time computations.
+- [Presistent](https://hackage.haskell.org/package/persistent) and [Esqueleto](https://hackage.haskell.org/package/esqueleto) typed SQL drivers.
+- [Yesod](https://www.yesodweb.com/) enterprise web framework.
+
+<ul class="no-bullet"><li>I am also qualified in other useful areas:</li></ul>
+
+- Nix
+- [PostgreSQL](https://www.postgresql.org/) - strong medium level. I'm not database expert, but I'm using everything what software developer should use to manipulate data storage. Expressions, transactions, joins, locks.
+- Bitcoin
+- Lightning Network
+- Linux
