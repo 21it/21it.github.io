@@ -35,6 +35,7 @@ main = hakyllWith cfg $ do
   create
     [ "about.html",
       "skills.html",
+      "code.html",
       "blog.html",
       "contact.html"
     ]

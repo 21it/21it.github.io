@@ -20,5 +20,6 @@ fontawesome: "fab fa-bitcoin"
 - Nix - strong medium level. Nix the best tool for deterministic builds, tests and development environment.
 - [PostgreSQL](https://www.postgresql.org/) - strong medium level. I'm not database expert, but I'm using everything what software developer should use to manipulate data storage. Expressions, transactions, joins, locks.
 - Bitcoin and Lightning Network - advanced level as application developer (not as protocol developer). Bitcoin is the greatest achievement of the new millennium, which brings financial freedom and sovereignty back to people.
+- [Dhall](https://dhall-lang.org/) - expert level. I'm using Dhall configuration language as safe and typed alternative to YAML, JSON and XML.
 - [Docker](https://www.docker.com/) and [Swarm](https://docs.docker.com/engine/swarm/) - advanced close to expert level. I'm using Docker and Swarm for development, builds and production. Docker is a very handy tool for MacOS and Linux compatibility.
 - Linux - strong medium level. Definitely not a Linux guru, but happily using it every day.
