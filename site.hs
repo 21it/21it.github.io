@@ -21,17 +21,10 @@ main = hakyllWith cfg $ do
   match "favicon/*" $ do
     route $ gsubRoute "favicon/" (const "")
     compile copyFileCompiler
-  match "index.html" $ do
-    route idRoute
-    compile $ do
-      blocks <- chronological =<< loadAll "index/*"
-      let indexCtx =
-            listField "blocks" defaultContext (return blocks)
-              <> defaultContext
-      getResourceBody
-        >>= applyAsTemplate indexCtx
-        >>= loadAndApplyTemplate "templates/default.html" indexCtx
-        >>= relativizeUrls
+  match "index.html" $
+    newIndex Informal
+  match "index.html" . version "formal" $
+    newIndex Formal
   create
     [ "about.html",
       "skills.html",
@@ -96,6 +89,11 @@ main = hakyllWith cfg $ do
         >>= applyAsTemplate ctx
         >>= relativizeUrls
 
+data Style
+  = Informal
+  | Formal
+  deriving (Eq, Ord, Show)
+
 cfg :: Configuration
 cfg =
   defaultConfiguration
@@ -113,3 +111,29 @@ postCtx :: Context String
 postCtx =
   dateField "date" "%B %e, %Y"
     <> defaultContext
+
+newIndex :: Style -> Rules ()
+newIndex style = do
+  route
+    . constRoute
+    $ case style of
+      Informal -> "index.html"
+      Formal -> "formal.html"
+  compile $ do
+    blocks <- chronological =<< loadAll "index/*"
+    let indexCtx =
+          listField "blocks" formalCtx (return blocks)
+            <> formalCtx
+    getResourceBody
+      >>= applyAsTemplate indexCtx
+      >>= loadAndApplyTemplate "templates/default.html" indexCtx
+      >>= relativizeUrls
+  where
+    formalCtx =
+      case style of
+        Informal ->
+          defaultContext
+        Formal ->
+          constField "formal" "true"
+            <> constField "color" "white"
+            <> defaultContext
