@@ -129,6 +129,9 @@ newIndex style = do
       >>= loadAndApplyTemplate "templates/default.html" indexCtx
       >>= relativizeUrls
   where
+    --
+    -- TODO : add when condition for formal stuff, generate docx
+    --
     formalCtx =
       case style of
         Informal ->
