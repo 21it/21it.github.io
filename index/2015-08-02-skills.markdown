@@ -17,9 +17,9 @@ fontawesome: "fab fa-bitcoin"
 
 <p class="padding-left">I am also qualified in other useful areas:</p>
 
-- Nix - Strong medium level. Nix the best tool for deterministic builds, tests and development environment.
-- [PostgreSQL](https://www.postgresql.org/) - Strong medium level. I'm not database expert, but I'm using everything what software developer should use to manipulate data storage. Expressions, transactions, joins, locks.
-- Bitcoin and Lightning Network - Advanced level as application developer (not as protocol developer). Bitcoin is the greatest achievement of the new millennium, which brings financial freedom and sovereignty back to people.
-- [Dhall](https://dhall-lang.org/) - Expert level. I'm using Dhall configuration language as safe and typed alternative to YAML, JSON and XML.
-- [Docker](https://www.docker.com/) and [Swarm](https://docs.docker.com/engine/swarm/) - Advanced close to expert level. I'm using Docker and Swarm for development, builds and production. Docker is a very handy tool for MacOS and Linux compatibility.
+- Nix - Strong medium level. Nix is the best tool for deterministic builds, tests and development environments.
+- [PostgreSQL](https://www.postgresql.org/) - Strong medium level. I am not database expert, but I am using everything what software developer should use to manipulate data storage. Queries, transactions, joins, locks.
+- Bitcoin and Lightning Network - Advanced level as application developer (not as protocol developer). Bitcoin is the greatest achievement of the new millennium, which brings financial freedom and sovereignty back to the people.
+- [Dhall](https://dhall-lang.org/) - Expert level. I am using Dhall configuration language as safe and typed alternative to YAML, JSON and XML.
+- [Docker](https://www.docker.com/) and [Swarm](https://docs.docker.com/engine/swarm/) - Advanced close to expert level. I am using Docker and Swarm for development, builds and production. Docker is a very handy tool for MacOS and Linux compatibility.
 - Linux - Strong medium level. Definitely not a Linux guru, but happily using it every day.

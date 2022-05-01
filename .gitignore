@@ -21,4 +21,3 @@ cabal.sandbox.config
 *.keter
 *~
 \#*
-docs/cv.pdf
