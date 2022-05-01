@@ -5,7 +5,7 @@ color: white
 fontawesome: "fab fa-bitcoin"
 ---
 
-<ul class="no-bullet"><li>Haskell is my primary and the most favorte tool. I do have advanced level of Haskell including:</li></ul>
+<p class="padding-left">Haskell is my primary and the most favorte tool. I do have advanced level of Haskell including:</p>
 
 - Tagless final encoding, monad transformers, lifting and unlifting for efficient effects management.
 - DataKinds for better phantom type parameters and [Singletons](https://hackage.haskell.org/package/singletons) for dependent type programming.
@@ -15,7 +15,7 @@ fontawesome: "fab fa-bitcoin"
 - [Presistent](https://hackage.haskell.org/package/persistent) and [Esqueleto](https://hackage.haskell.org/package/esqueleto) typed SQL drivers.
 - [Yesod](https://www.yesodweb.com/) enterprise web framework.
 
-<ul class="no-bullet"><li>I am also qualified in other useful areas:</li></ul>
+<p class="padding-left">I am also qualified in other useful areas:</p>
 
 - Nix - Strong medium level. Nix the best tool for deterministic builds, tests and development environment.
 - [PostgreSQL](https://www.postgresql.org/) - Strong medium level. I'm not database expert, but I'm using everything what software developer should use to manipulate data storage. Expressions, transactions, joins, locks.

@@ -9,5 +9,8 @@ stack exec site clean
 stack exec -- site rebuild
 (
   cd "$THIS_DIR/docs"
-  htmldoc --webpage -f cv.pdf ./formal.html
+  htmldoc \
+    -f cv.pdf \
+    --webpage --header "..." --footer ".1." \
+    ./formal.html
 )
